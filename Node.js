@@ -1,9 +1,11 @@
 var fs = require('fs');
+var path = require('path');
+
 const express = require("express");
 const cors = require('cors');
    
 // json file with the data
-var data = fs.readFileSync('taxcode.json');
+var data = fs.readFileSync(path.resolve(__dirname, 'taxcode.json'));
    
 var elements = JSON.parse(data);
 const app = express();
